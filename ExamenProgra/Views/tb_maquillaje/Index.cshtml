@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ExamenProgra.Models.tb_maquillaje>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table"style="background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-high-end-atmosphere-simple-wind-makeup-area-banner-image_194935.jpg) ">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lanzamiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vencimiento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lanzamiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vencimiento)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdMaquillaje }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdMaquillaje }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdMaquillaje })
+        </td>
+    </tr>
+}
+
+</table>

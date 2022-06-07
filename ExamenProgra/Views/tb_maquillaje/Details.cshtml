@@ -1,0 +1,66 @@
+﻿@model ExamenProgra.Models.tb_maquillaje
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tb_maquillaje</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lanzamiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lanzamiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vencimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vencimiento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdMaquillaje }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
